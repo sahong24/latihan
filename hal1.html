@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>hal 1</title>
+        <script src="./phaser.js"></script>
+    </head>
+    <body>
+
+    <script type="text/javascript">
+
+    window.onload = function() {
+
+
+        var game = new Phaser.Game(800, 1280, Phaser.AUTO, '', { preload: preload, create: create });
+
+        function preload () {
+
+            game.load.image('ssb', 'assetLetsRecycle/Splash Screen bg.png');
+            game.load.image('char','assetLetsRecycle/character.png');
+            game.load.image('oray','assetLetsRecycle/end_game_oraylogo.png');
+            game.load.image('inmo','assetLetsRecycle/end_game_inmorionlogo.png');
+            game.load.image('logolet','assetLetsRecycle/logo_letsrecycle.png');
+            game.load.image('item5','assetLetsRecycle/item 5.png');
+            game.load.image('item10','assetLetsRecycle/item 10.png');
+            game.load.image('item3','assetLetsRecycle/item 3.png');
+            game.load.image('item4','assetLetsRecycle/item 4.png');
+            game.load.image('btnmain','assetLetsRecycle/btn_main.png');
+            game.load.image('btnleader','assetLetsRecycle/btn_leaderboard.png');
+
+        }
+
+        function create () {
+
+            game.add.sprite(0,0,'ssb');
+            var btnmain = game.add.sprite(game.world.centerX=255,game.world.centerY=980,'btnmain');
+            var btnleader = game.add.sprite(game.world.centerX=170,game.world.centerY=1110,'btnleader');
+            var char = game.add.sprite(game.world.centerX=95,game.world.centerY=440,'char');
+            var oray = game.add.sprite(game.world.centerX=25,game.world.centerY=25,'oray');
+            var inmo = game.add.sprite(game.world.centerX=635,game.world.centerY=25,'inmo');
+            var item5 = game.add.sprite(game.world.centerX= 50,game.world.centerY=300,'item5');
+            item5.angle +=35;
+            var item10 = game.add.sprite(game.world.centerX= 310,game.world.centerY=310,'item10');
+            var item3 = game.add.sprite(game.world.centerX= 400,game.world.centerY=420,'item3');
+            var item4 = game.add.sprite(game.world.centerX= 710,game.world.centerY=380,'item4');
+            item4.angle +=30;
+            var logolet = game.add.sprite(game.world.centerX= 10,game.world.centerY=0.1,'logolet');
+
+        }
+
+    };
+
+    </script>
+
+    </body>
+</html>
